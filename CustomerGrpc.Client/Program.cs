@@ -36,5 +36,4 @@ await foreach (var item in stream.ResponseStream.ReadAllAsync(cts.Token))
     Console.WriteLine($"→ {item.CustomerId} | {item.FullName} | {item.Email}");
 }
 
-//dotnet run -c Release --project CustomerGrpc.Benchmarks
 Console.ReadLine();
