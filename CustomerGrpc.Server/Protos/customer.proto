@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+//option csharp_namespace = "CustomerGrpc.Server";
+option csharp_namespace = "CustomerGrpc";
+
+package customer.v1;
+
+service CustomerService {
+  rpc CreateCustomer (CreateCustomerRequest) returns (CustomerResponse);
+  rpc GetCustomerById (GetCustomerByIdRequest) returns (CustomerResponse);
+  rpc StreamCustomers (StreamCustomersRequest) returns (stream CustomerResponse);
+}
+
+message CreateCustomerRequest {
+  string full_name = 1;
+  string email = 2;
+}
+
+message GetCustomerByIdRequest {
+  string customer_id = 1;
+}
+
+message StreamCustomersRequest {
+  int32 delay_ms = 1;
+}
+
+message CustomerResponse {
+  string customer_id = 1;
+  string full_name = 2;
+  string email = 3;
+  string created_utc = 4;
+}

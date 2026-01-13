@@ -1,0 +1,11 @@
+﻿ syntax = "proto3";
+
+option csharp_namespace = "CustomerGrpc.Benchmarks.Protos";
+package customer.bench.v1;
+
+message CustomerProto {
+  string customer_id = 1;
+  string full_name = 2;
+  string email = 3;
+  string created_utc = 4;
+}

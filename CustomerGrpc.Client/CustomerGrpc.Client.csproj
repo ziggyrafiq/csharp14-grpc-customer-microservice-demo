@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Protobuf Include="..\CustomerGrpc.Server\Protos\customer.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.Net.Client" Version="*" />
+		<PackageReference Include="Google.Protobuf" Version="*" />
+		<PackageReference Include="Grpc.Tools" Version="*" PrivateAssets="All" />
+	</ItemGroup>
+
+</Project>

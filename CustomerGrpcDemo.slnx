@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="CustomerGrpc.Benchmarks/CustomerGrpc.Benchmarks.csproj">
+    <BuildType Project="Release" />
+  </Project>
+  <Project Path="CustomerGrpc.Client/CustomerGrpc.Client.csproj" Id="a77f414f-af9f-498c-8c67-8b4a2af4d8ed" />
+  <Project Path="CustomerGrpc.Server/CustomerGrpc.Server.csproj" />
+</Solution>
